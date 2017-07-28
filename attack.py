@@ -120,7 +120,7 @@ if __name__ == '__main__':
 	print "Debug : thread=%d time=%d %s"%(int(num_thread),int(interval),url)
 	if url.count('/') == 2:
 		url = url + "/"
-	m = re.search('http\://([^/]*)/?.*', url)
+	m = re.search('https?\://([^/]*)/?.*', url)
 	try :
 		host = m.group(1)
 	except AttributeError,e:
